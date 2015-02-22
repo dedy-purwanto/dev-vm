@@ -37,5 +37,5 @@ development-packages:
             - zlib1g-dev
             - zsh
     cmd.run:
-        - workspace-dir: mkdir ~/workspaces
+        - name: mkdir ~/workspaces
             
