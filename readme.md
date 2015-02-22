@@ -9,6 +9,7 @@ Requirement
 
 * Must be semantic
 * Must not rely on too many external sources
+* No redudancy
 
 This is the list of packages and environment setup that I use for
 most of my developments. This script uses SaltStack to setup everthing. 

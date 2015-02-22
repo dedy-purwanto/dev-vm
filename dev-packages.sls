@@ -1,0 +1,41 @@
+development-packages:
+    - installed:
+        - pkgs:
+            - ack-grep
+            - build-essential
+            - cmake
+            - git
+            - gpm
+            - grads
+            - libc6
+            - libfreetype6-dev
+            - libgtk2.0-dev
+            - libjpeg62-dev
+            - libncurses5
+            - libx11-dev
+            - libxml2-dev
+            - libxslt1-dev
+            - libxt-dev
+            - memcached
+            - ncurses-dev
+            - nginx
+            - node
+            - openjgk-7-jre
+            - openssh-server
+            - p7zip-full
+            - postgresql
+            - postgresql-server-dev-9.3
+            - python
+            - python-dev
+            - python-pip
+            - ruby
+            - ruby-dev
+            - supervisor
+            - tmux
+            - vim
+            - xclip
+            - zlib1g-dev
+            - zsh
+    cmd.run:
+        - workspace-dir: mkdir ~/workspaces
+            
