@@ -17,10 +17,11 @@ dev-packages:
             - libxslt1-dev
             - libxt-dev
             - memcached
+            - mercurial
             - ncurses-dev
             - nginx
             - node
-            - openjgk-7-jre
+            - openjdk-7-jre
             - openssh-server
             - p7zip-full
             - postgresql
