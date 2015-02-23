@@ -17,7 +17,7 @@ install-ycm:
         - name: |
               set -e
               cd ~/.vim/bundle/YouCompleteMe/
-              git submodule --init --recursive
+              git submodule init
               ./install.sh
         - unless:
             - ls ~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so
