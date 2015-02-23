@@ -13,7 +13,7 @@ install-oh-my-zsh:
     cmd.run:
         - name: |
             set -e
-            curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+            git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
         - unless:
             - ls ~/.oh-my-zsh
         - require:
