@@ -1,9 +1,9 @@
 base:
     '*':
-        - dev-packages
-        - root-pip-packages
-        - db-config
+        - dev_packages
+        - pip_packages
+        - db
         - dotfiles
-        - shell-setup
-        - vim-setup
-        - tmux-setup
+        - shell
+        - vim
+        - tmux

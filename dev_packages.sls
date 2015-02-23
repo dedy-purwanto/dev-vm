@@ -1,5 +1,5 @@
-development-packages:
-    - installed:
+dev-packages:
+    pkg.installed:
         - pkgs:
             - ack-grep
             - build-essential
@@ -28,6 +28,7 @@ development-packages:
             - python
             - python-dev
             - python-pip
+            - rabbitmq-server
             - ruby
             - ruby-dev
             - supervisor
@@ -36,6 +37,3 @@ development-packages:
             - xclip
             - zlib1g-dev
             - zsh
-    cmd.run:
-        - name: mkdir ~/workspaces
-            

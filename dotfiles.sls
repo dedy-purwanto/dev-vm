@@ -1,15 +1,19 @@
+include:
+    - dev_packages
+    - tmux
+    - shell
+
 setup-dotfiles:
-    - require:
-        - sls: dev-packages
-        - sls: shell-packages
-        - sls: tmux-packages
     cmd.run:
         - name: |
             cd ~/workspaces/
             rm -f dotfiles
-            git clone https://github.com/kecebongsoft/dotfiles.git
+            git clone https://github.com/kecebongsoft/dotfiles.git ~/workspaces/dotfiles/
             cd dotfiles/
             ./install.sh
-        - cwd: ~/workspaces/ 
         - shell: /bin/bash
+        - require:
+            - sls: dev_packages
+            - sls: tmux
+            - sls: shell
 
