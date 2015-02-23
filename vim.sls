@@ -2,6 +2,18 @@ include:
     - dev_packages
     - dotfiles
 
+install-vundle:
+    cmd.run:
+        - name: |
+              set -e
+              git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
+              vim +PluginInstall +qall now
+              cd ~/.vim/bundle/YouCompleteMe/
+              ./install.sh
+        - require:
+            - sls: dev_packages
+            - sls: dotfiles
+
 vim-setup:
     cmd.run:
         - name: |
@@ -12,11 +24,8 @@ vim-setup:
               make
               sudo make install
               update-alternatives --install /usr/bin/vim vim /usr/local/bin/vim 1
-              git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
-              vim +PluginInstall +qall now
-              cd ~/.vim/bundle/YouCompleteMe/
-              ./install.sh
-        - cmd: /tmp/
+        - unless:
+            - vim --version | grep "Huge version"
         - require:
             - sls: dev_packages
             - sls: dotfiles
