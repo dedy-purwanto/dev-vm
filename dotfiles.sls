@@ -7,12 +7,12 @@ setup-dotfiles:
     cmd.run:
         - name: |
             set -e
-            mkdir -f ~/workspaces/
+            mkdir -p ~/workspaces/
             cd ~/workspaces/
             rm -rf dotfiles
             git clone https://github.com/kecebongsoft/dotfiles.git ~/workspaces/dotfiles/
             cd dotfiles/
-            mkdir -f ~/.tmuxinator
+            mkdir -p ~/.tmuxinator
             ./install.sh
         - shell: /bin/bash
         - require:

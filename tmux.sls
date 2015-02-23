@@ -5,6 +5,7 @@ install-tpm:
     cmd.run:
         - name: |
             set -e
+            rm -rf ~/.tmux/plugins/tpm
             git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
         - unless:
             - ls ~/.tmux/plugins/tpm

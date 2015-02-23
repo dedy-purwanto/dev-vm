@@ -6,13 +6,24 @@ install-vundle:
     cmd.run:
         - name: |
               set -e
+              rm -rf ~/.vim/bundle/vundle/
               git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
               vim +PluginInstall +qall now
-              cd ~/.vim/bundle/YouCompleteMe/
-              ./install.sh
         - require:
             - sls: dev_packages
-            - sls: dotfiles
+
+install-ycm:
+    cmd.run:
+        - name: |
+              set -e
+              cd ~/.vim/bundle/YouCompleteMe/
+              git submodule --init --recursive
+              ./install.sh
+        - unless:
+            - ls ~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so
+        - require:
+            - sls: dev_packages
+            - cmd: install-vundle
 
 vim-setup:
     cmd.run:
