@@ -18,6 +18,6 @@ To install, run this script on VM (tested on Ubuntu 14.04):
 
 ```
 wget -O - https://bootstrap.saltstack.com | sudo sh
-curl -L https://github.com/kecebongsoft/dev-vm/archive/master.tar.gz | tar -xz
+wget -O - https://github.com/kecebongsoft/dev-vm/archive/master.tar.gz | tar -xz
 sudo salt-call --local --file-root=./dev-vm-master
 ```
