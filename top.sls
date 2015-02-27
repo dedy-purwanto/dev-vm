@@ -1,9 +1,9 @@
 base:
     '*':
         - dev_packages
-        - pip_packages
-        - npm_packages
-        - gem_packages
+        - python_packages
+        - node_packages
+        - ruby_packages
         - db
         - dotfiles
         - shell
