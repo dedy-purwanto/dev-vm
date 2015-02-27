@@ -1,7 +1,7 @@
 include:
     - dev_packages
 
-root-node-packages:
+root-ruby-packages:
     gem.installed:
         - pkgs:
             - sass
