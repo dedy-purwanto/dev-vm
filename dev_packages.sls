@@ -21,6 +21,7 @@ dev-packages:
             - ncurses-dev
             - nginx
             - node
+            - nodejs-legacy
             - openjdk-7-jre
             - openssh-server
             - p7zip-full
@@ -32,6 +33,7 @@ dev-packages:
             - rabbitmq-server
             - ruby
             - ruby-dev
+            - rubygems
             - supervisor
             - tmux
             - vim

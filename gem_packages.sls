@@ -1,10 +1,10 @@
 include:
     - dev_packages
 
-root-python-packages:
-    pip.installed:
+root-node-packages:
+    gem.installed:
         - pkgs:
-            - ipython
-            - virtualenvwrapper
+            - sass
+            - sass-globbing
         - require:
             - sls: dev_packages
