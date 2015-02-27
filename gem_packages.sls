@@ -6,5 +6,6 @@ root-node-packages:
         - pkgs:
             - sass
             - sass-globbing
+            - git-up
         - require:
             - sls: dev_packages
